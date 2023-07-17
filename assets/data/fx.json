@@ -1,0 +1,89 @@
+{
+	"generic": {
+		"headernav": [{
+			"name": "View PDF Guide",
+			"link": "https://www.prudential.com.sg/-/media/project/prudential/pdf/ebrochures/pruwealth-iii-sgd/pruwealth-iii-sgd_eng.pdf",
+			"target": "_blank"
+		}],
+		"SharePriceCurrencyHKDValue": "7.757600",
+		"FileUpdatedDate": "26 October 2022"
+	},
+
+	"fx": [{
+		"code": "CNY",
+		"value": "6.479300"
+	}, {
+		"code": "KHR",
+		"value": "0.000246"
+	},{
+		"code": "EUR",
+		"value": "0.830100"
+	},{
+		"code": "GHS",
+		"value": "0.168862"
+	},{
+		"code": "GBP",
+		"value": "0.725100"
+	},{
+		"code": "HKD",
+		"value": "7.757600"
+	},{
+		"code": "IDR",
+		"value": "14158.238100"
+	},{
+		"code": "INR",
+		"value": "72.893300"
+	},{
+		"code": "JPY",
+		"value": "106.099700"
+	},{
+		"code": "KES",
+		"value": "109.748700"
+	},{
+		"code": "KRW",
+		"value": "1114.658700"
+	},{
+		"code": "LAK",
+		"value": "9347.096100"
+	},{
+		"code": "MMK",
+		"value": "1384.568039"
+	},{
+		"code": "MYR",
+		"value": "4.067100"
+	},{
+		"code": "NGN",
+		"value": "403.892200"
+	},{
+		"code": "PHP",
+		"value": "48.310800"
+	},{
+		"code": "SGD",
+		"value": "1.332600"
+	},{
+		"code": "THB",
+		"value": "30.299200"
+	},{
+		"code": "TWD",
+		"value": "28.077100"
+	},{
+		"code": "UGX",
+		"value": "3673.270600"
+	},{
+		"code": "USD",
+		"value": "1.000000"
+	},{
+		"code": "VND",
+		"value": "23048.817500"
+	},{
+		"code": "XAF",
+		"value": "544.595200"
+	},{
+		"code": "XOF",
+		"value": "544.595200"
+	},{
+		"code": "ZMW",
+		"value": "21.641600"
+	}]
+}
+

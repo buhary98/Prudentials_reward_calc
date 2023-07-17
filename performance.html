@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gte IE 8]> <html class="no-js ie newie" lang="en-US"> <![endif]-->
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">-->
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--SET HTTP HEADERS Meta-->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff">  
+
+    <!-- Meta Tags - Google -->
+    <title>Prudentials | Performance Management & Reward Framework </title>
+    <meta name="description" content="Performance Management & Reward Framework">
+    <meta name="keywords" content="Performance Management & Reward Framework">
+    <meta name="author" content="Habeeb Mohamed, dentsu international, Singapore">
+
+
+    <meta property="og:title" content="Prudentials | Performance Management & Reward Framework" />
+    <meta property="og:description" content="Performance Management & Reward Framework" />
+    <meta property="og:image" content="./public/assets/images/logo.png" />
+        
+    <!-- favicon-->
+    <link rel="icon" href="./public/assets/images/favicon.png">
+    
+    <!-- Custom Resource styles -->
+     <link rel="stylesheet" type="text/css" href="./public/main.css"/>
+
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/generic.css"/>-->
+
+  </head>
+  <body id="performancePage">
+ 
+  <header>
+      <div class="container-fluid">
+       <div class="site-padding">
+     
+         <div class="row">
+             <div class="col-3 col-sm-3">
+                <a href="index.html"><img src="./public/assets/images/logo.png" width="145" height="auto"  class="logo" alt="3Mlogo"/></a>
+             </div>   
+             <div class="col-9 col-sm-9" id="navmenu">
+              <!-- Use any element to open the sidenav for mobile -->
+              <span class="hamburger" id="openNav"><i class="fas fa-bars"></i></span>
+                <div id="mySidenav1" class="sidenav1">
+                  <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+                    <ul id="jsonmenu11">
+                     <!-- menu will come-->
+                    </ul>
+                </div>
+             </div>
+        </div> 
+     
+       </div>
+    </div> 
+  </header>
+
+
+   <!-- Page Content Performance Management Calculator-->
+    <div class="page" id="pmcalculatorpage">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-12 col-sm-2 justify-content-center align-self-end">
+            <div class="mb-3 aligncenter">
+              <img src="./public/assets/images/goals1.png" width="220" height="auto" alt="goals settings" class="imgposition"/>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-8 positioned">
+
+
+            <div class="steps">
+              <div class="mb-3">
+                <div class="bg">
+                  <div class="step1"></div>
+                </div> 
+              </div>
+            </div> <!--steps-->
+    
+               <div class="row mtops-top">
+                  <div class="col-sm-12 flexinline">
+                    <img src="./public/assets/images/performance-measurement.png" width="55" height="auto" class="step-icon" alt="performance-measurement"/>
+                   
+                    <div class="step-intro">
+                      <h2>Performance Measurement</h2>
+                      <p>
+                        At Prudential, you are assessed with “What” you have achieved against your objectives, 
+                        and “How” you have demonstrated our values. 
+                        <span class="ctooltip" id="valuesInfo"> <i class="fa-solid fa-circle-info"></i>
+                          <span class="tooltiptext">Click to view the values</span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+  
+                  <hr/>
+              </div>
+          
+  
+  
+  
+            <form name="pcalculator" id="pcalculator" class="pcalculator" novalidate>
+  
+                <div class="mb-3 row">
+
+                  <div class="col-sm-4 mtop">
+                    <h3 class="gcta"> WHAT <span>Objectives</span> 
+                      <span class="ctooltip" id="whatobjectivepopup"> 
+                        <i class="fa-solid fa-circle-info"></i> 
+                        <span class="tooltiptext">Click to view the WHAT objectives informations</span>
+                      </span>
+                    </h3>
+                  </div> 
+
+
+                  <div class="col-sm-4 mtop">
+                    <input type="number" class="form-control whpercentage" id="whatpercentage" placeholder="Enter your Business Unit WHAT Weighting" value="" required>
+                    <label class="whpercent">%</label>
+                    <div class="invalid-feedback" id="err-whatpercentage"> % is empty</div>
+                  </div> 
+                </div>
+  
+  
+  
+                <div id="goalslisting"> 
+                    <div class="mb-3 row">
+                      <label class="col-4 col-form-label"></label>
+                      <label class="col-2 col-form-label">Objective Weighting</label>
+                      <label class="col-4 col-form-label">  Rating
+                         <div class="ctooltip" id="ratingInfo"> <i class="fa-solid fa-circle-info"></i>
+                          <span class="tooltiptext">Click to view the rating informations</span>
+                        </div>
+                      </label>
+                      <label class="col-2 col-form-label textcenter">Final Score</label>
+                    </div>
+  
+                    <div class="mb-3 row">
+                      <div class="col-1"></div>
+                      <div class="col-3">
+                        <input type="text" class="form-control goals" id="igoals1" placeholder="" value="Objective 1">
+                      </div>
+                      <div class="col-2">
+                        <input type="number" min="1" class="form-control weight" id="weighting1" placeholder="Enter Weighting" value="" required>
+                        <label class="percent">%</label>
+                        <div class="invalid-feedback" id="err-weight">Weight is empty!</div>
+                      </div>
+                      <div class="col-4">
+                        <select class="form-select prating" id="prating1" required>
+                          <option selected disabled hidden value="">Select Rating</option>
+                          <option value="0.00">Needs Improvement (0.00)</option>
+                          <option value="0.95">Effective (0.95)</option>
+                          <option value="1.15">Highly Effective (1.15)</option>
+                          <option value="1.40">Outstanding (1.40)</option>
+                        </select>
+                        <div class="invalid-feedback" id="err-prating">Please select your rating</div>
+                      </div>
+                      <div class="col-2 textcenter">
+                        <input type="number" class="form-control calc score" id="score1" readonly="" value="">
+                        <label class="spercent">%</label>
+                      </div>
+                    </div>
+  
+  
+                    <div id="formcotnent"></div> <!-- Dynamic fields -->
+                    <p class="invalid-feedback" id="err-weightage">Objectives total Weighting must be 100%</p>
+  
+                  
+                    <div class="mb-3 row">
+                      <div class="col-12 text-left mb-3" id="addgoals">
+                        <span id="addrows" class="bcta">Add more objective</span> 
+  
+                        <!--<img src="./public/assets/images/plus.png" class="img-responsive addrows" id="addrows"/>
+                        <input type="button" value="+" id="addrows" /> Add Goal-->
+                      </div>
+                    </div>
+  
+                    <div class="row mb-3 mtop totalbg" id="wtotal">
+                      <p class="col-10 ">
+                        Total WHAT Score
+                        <input type="hidden" class="form-control calc" id="fwtscore" readonly="" value="">
+                        <input type="hidden" class="form-control calc" id="fwtsumweight" readonly="" value="">
+                      </p> 
+                      <h4 class="col-2 twscroe" id="twscroe"></h4>
+                    </div>
+                    
+  
+                    <div id="howscoresection">
+  
+                          <div class="mb-3 row">
+                            <div class="col-sm-4 mtop">
+                              <h3 class="gcta"> HOW <span>Behaviors</span></h3>
+                            </div> 
+                            <div class="col-sm-4 mtop">
+                              <input type="number" class="form-control whpercentage" id="howpercentage" placeholder="Enter your Business Unit How Weighting" value="" required>
+                              <label class="whpercent">%</label>
+                              <div class="invalid-feedback" id="err-howpercentage"> % is empty</div>
+                            </div> 
+                          </div>
+  
+  
+                          <div class="mb-3 row">
+                            <label class="col-4 col-form-label"> &nbsp; </label>
+                            <label class="col-2 col-form-label">HOW Weighting</label>
+                            <label class="col-4 col-form-label"> Rating
+                              <div class="ctooltip" id="ratingInfo"> <i class="fa-solid fa-circle-info"></i>
+                                <span class="tooltiptext">Click to view the rating informations</span>
+                              </div>
+                            </label>
+                            <!--<label class="col-2 col-form-label">Final Score</label>-->
+                          </div>
+  
+                          <div class="mb-3 row">
+                            <h3 class="col-4 values">Ambitious, Curious, Empathetic, <br/> Courageous, Nimble </h3>
+                            <div class="col-2">
+                              <input type="number" min="1" max="100" class="form-control hweight" id="hweighting" placeholder="100" value="100" readonly="" required>
+                              <label class="percent">%</label>
+                              <div class="invalid-feedback" id="err-hweight">Weight is empty!</div>
+                            </div>
+                            <div class="col-4">
+                              <select class="form-select hprating" id="hprating" required>
+                                 <option selected disabled hidden value="">Select Rating</option>
+                                 <option value="0.00">Needs Improvement (0.00)</option>
+                                 <option value="0.95">Effective (0.95)</option>
+                                 <option value="1.15">Highly Effective (1.15)</option>
+                                 <option value="1.40">Outstanding (1.40)</option>
+                              </select>
+                              <div class="invalid-feedback" id="err-hrating">Please select your rating</div>
+                            </div>
+                            <div class="col-2">
+                              <input type="hidden" class="form-control calc hscore" id="hscore" readonly="" value="">
+                              <!--<label class="spercent">%</label>-->
+                            </div>
+                          </div>
+  
+                          <div class="row mb-3 mtop totalbg" id="htotal">
+                            <p class="col-10">Total HOW Score</p>  
+                            <h4 class="col-2 hfscroe" id="hfscroe"></h4>
+                          </div>
+  
+  
+                          <div class="row">
+                            <div class="col-12 mb-3">
+                              <p class="invalid-feedback" id="err-overallweightage">Overall WHAT/HOW weighting total should be 100%</p>
+                            </div>
+                          </div>
+  
+                    </div>
+  
+  
+                    <div class="mtop row" id="overperformance">
+  
+                      <h3 class="overall">Overall Performance Rating</h3>
+  
+                      <div class="col-12 mtops">
+  
+                        <div class="row">
+                            <div class="col-sm-3 overall-ouput">
+                              <h5 class="gcta"> WHAT <span class="small">Objectives</span> 
+                                <span class="ctooltip" id="whatobjectivepopup"> 
+                                  <i class="fa-solid fa-circle-info"></i> 
+                                  <span class="tooltiptext">Click to view the WHAT objectives informations</span>
+                                </span>
+                              </h5>
+
+
+                              <span class="otitle">Total WHAT Score</span>
+                              <span class="twscoreHtml" id="twscoreHtml">109.1%</span>
+                              <span class="multipy">x</span>
+                              <span>WHAT Weighting</span>
+                              <span class="wpercentHtml" id="wpercentHtml"></span>
+                            </div> 
+  
+                            <div class="col-sm-1 makeitcenter">
+                              <span class="oplus">+</span>
+                            </div> 
+  
+  
+                            <div class="col-sm-3 overall-ouput">
+                              <h5 class="gcta">HOW <span class="small">Behaviours</span> </h5>
+                              <span class="otitle">Total HOW Score</span>
+                              <span class="hfscoreHtml" id="hfscoreHtml">95%</span>
+                              <span class="multipy">x</span>
+                              <span>HOW Weighting</span>
+                              <span class="hpercentHtml" id="hpercentHtml"></span>
+                            </div> 
+                            
+                            <div class="col-sm-1 makeitcenter">
+                              <span class="equalsto">=</span>
+                            </div> 
+  
+  
+                            <div class="col-sm-3">
+                                <div class="row">
+                                  <div class="col-sm-12 overall-ouput">
+                                    <h5 class="gcta overall-result">Results </h5>
+                                    <span class="finalResultsHtml" id="finalResultsHtml"></span>
+                                  </div> 
+  
+                                  <div class="col-sm-12 mtops overall-ouput">
+                                    <h5 class="gcta overall-guided"> Overall Guided Rating
+                                      <span class="ctooltip" id="finalresultspopup"> 
+                                        <i class="fa-solid fa-circle-info"></i> 
+                                        <span class="tooltiptext">Click to view the Overall Guided Rating Informations</span>
+                                      </span>
+                                    </h5>
+
+                                    <span class="ratingMHtml" id="ratingMHtml"></span>
+                                    <span>Guided AIB Individual Multipler</span>
+                                    <span class="individualMHtml" id="individualMHtml"></span>
+                                  </div> 
+                                </div>
+                            </div>
+  
+                        </div>
+  
+                        <p> <br/>
+                          The calculated Overall Guided Rating and Individual AIB Multiplier forms 
+                          the basis for further calibration with the wider group.
+                        </p>
+  
+                        <div class="mb-3 mtop" id="fnext">
+                          <span id="gotobc" class="rcta mb-3">Next to Compensation Data</span>
+                        </div>
+  
+                      </div>
+                    </div>
+  
+  
+                </div> <!--goalslisting -->
+  
+            </form>
+          </div> 
+
+          <div class="col-12 col-sm-2 justify-content-center align-self-end">
+            <div class="mb-3 aligncenter">
+              <img src="./public/assets/images/goals2.png" width="220" height="auto" alt="goals settings" class="imgposition right"/>
+            </div>
+          </div>
+
+
+        </div><!--row-->
+      </div>
+    </div> <!-- Page Content Performance Management Calculator-->
+
+
+
+
+
+     <!-- Page Content Bonus Calculator-->
+     <div class="page" id="aibcpage">
+      <div class="container-fluid">
+        <div class="row">
+
+
+          <div class="col-12" id="aibcalculator"> 
+            <div class="row">
+
+              <div class="col-12 col-sm-2 justify-content-center align-self-end">
+                <div class="mb-3 aligncenter">
+                  <span id="backtopmc" class="bcta mb-3 backposition">Back</span>
+                  <img src="./public/assets/images/compensation1.png" width="220" height="auto" alt="Compensation Data" class="imgposition"/>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-8 positioned">
+               
+                <div class="steps">
+                  <div class="mb-3">
+                    <div class="bg">
+                      <div class="step2"></div>
+                    </div> 
+                  </div>
+                </div> <!--steps-->
+
+                <form name="bcalculator" id="bcalculator" class="calculator mtop" novalidate>
+                   <div class="row mtops-top">
+                      <div class="col-sm-12 flexinline">
+                        <img src="./public/assets/images/compensation-data.png" width="55" height="auto" class="step-icon" alt="performance-measurement"/>
+                          <div class="step-intro">
+                            <h2>Compensation Data </h2>
+                            <p>
+                              At Prudential, your compensation is made up of Fixed Compensation (Known as 
+                              Total Guaranteed Cash) and Variable Compensation (known as Annual Incentive Bonus)
+                            </p>
+                          </div>
+                      </div>
+
+                      <div class="col-sm-3">
+                        <select class="form-select" name="currency" id="currency" required></select>
+                        <input type="hidden" class="form-control calc" name="currencyCode" id="fcurrencyCode" readonly placeholder="" value=""  />
+                        <input type="hidden" class="form-control calc" name="currencyValue" id="fcurrencyValue" readonly placeholder="" value=""  />
+                        <p class="invalid-feedback" id="err-currency">Please choose your currency</p>
+                      </div>
+
+                      <p></p>
+                      <hr/>
+                  </div>
+                
+
+
+                <div class="row mtop baselist">
+                 
+                  <div class="col-12 col-sm-9">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="compensation-intro">
+                          <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                          <h2>Total Guaranteed Cash</h2>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-3">
+                        <label class="col-form-label">Annual Base Salary</label>
+                        <input type="number"  min="1" class="form-control" name="annualbase" id="annualbase" placeholder="Enter amount" value="" required />
+                        <label class="curr_currency" id="curr_currency"></label>
+                        <div class="invalid-feedback" id="err-annualbase">Annual Base Salary is empty!</div>
+                      </div>
+
+                      <div class="col-sm-1 makeitcenter">
+                        <span class="oplus">+</span>
+                      </div> 
+
+                      <div class="col-12 col-sm-3">
+                        <label class="col-form-label">Annual Fixed Bonus (if any)</label>
+                        <input type="number" min="1" class="form-control fba" name="fbonus" id="fbonus"  placeholder="Enter amount" value="" />
+                        <label class="curr_currency" id="curr_currency"></label>
+                      </div>
+
+                      <div class="col-sm-1 makeitcenter">
+                        <span class="oplus">+</span>
+                      </div> 
+
+                      <div class="col-12 col-sm-3">
+                        <label class="col-form-label">Annual Allowances (if any) </label>
+                        <input type="number" min="1" class="form-control fba" name="tallowance" id="tallowance" placeholder="Enter amount" value="" />
+                        <label class="curr_currency" id="curr_currency"></label>
+                      </div>
+
+                      <div class="col-sm-1 makeitcenter">
+                        <span class="oplus">=</span>
+                      </div>
+
+                    </div>
+                  </div><!--col-sm-9-->
+
+                  <div class="col-12 col-sm-3">
+                    <div class="calcdiv">
+
+                      <div class="calcdivcenter">
+                        <span>Total Guaranteed Cash </span>
+                        <input type="hidden" class="form-control calc" name="tguaranteedcash" id="tguaranteedcash" readonly placeholder="" value=""  />
+                        <span id="tguaranteedcashHtml"></span>
+                      </div>
+
+                    </div>
+                  </div>
+                 
+                </div><!--row-->
+
+
+                <div class="row mtop aibtargetlist">
+                 
+                  <div class="col-12 col-sm-9">
+                    <div class="row">
+                    
+
+                      <div class="col-12 col-sm-4">
+                        <div class="compensation-intro">
+                          <img src="./public/assets/images/target-aib-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                          <h2>AIB Target </h2>
+                        </div>
+                        <input type="text" class="form-control" name="targetaib" id="targetaib" placeholder="Enter percentage" value="" required/>
+                        <label class="percent">%</label>
+                        <div class="invalid-feedback" id="err-aibtarget">AIB Target is empty!</div>
+                      </div>
+
+                      <div class="col-sm-2 makeitcenter">
+                        <span class="oplus">x</span>
+                      </div> 
+
+                      <div class="col-12 col-sm-4">
+                        <div class="calcdiv">
+                          <div class="calcdivcenter">
+                            <span>Annual Base Salary</span>
+                            <span id="annualbasesalaryHtml"></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 makeitcenter">
+                        <span class="equalsto">=</span>
+                      </div> 
+
+                     
+                    </div>
+                  </div><!--col-sm-9-->
+
+                  <div class="col-12 col-sm-3">
+                    <div class="calcdiv">
+                      <div class="calcdivcenter">
+                        <span>Target AIB Amount </span>
+                        <input type="hidden" class="form-control calc" name="aibamount" id="aibamount" readonly placeholder="" value="" />
+                        <span id="aibamountHtml"></span>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </div><!--row-->
+
+                <hr/>
+
+                <div class="row mb-3">
+                  <div class="col-12 mtop">
+                    <h3 class="overall">Target Total Compensation</h3>
+                  </div>
+                </div>
+
+
+                <div class="row targetcompensationlist">
+                  <div class="col-sm-3 calcdiv textcenter">
+                    <h5 class="icon">
+                      <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                    </h5>
+
+                    <div class="calcdivcenter">
+                      <span>Total Guaranteed Cash </span>
+                      <span id="tguaranteedcashHtml"></span>
+                    </div>
+                  </div> 
+
+                  <div class="col-sm-1 makeitcenter">
+                    <span class="oplus">+</span>
+                  </div> 
+
+
+                  <div class="col-sm-3 calcdiv textcenter">
+                    <h5 class="icon">
+                      <img src="./public/assets/images/target-aib-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                    </h5>
+
+                    <div class="calcdivcenter">
+                      <span>Target AIB Amount</span>
+                      <input type="hidden" class="form-control calc" name="totalvariablepay" id="totalvariablepay" readonly placeholder="" value="" />
+                      <span id="totalvariablepayHtml"></span>
+                    </div>
+
+                  </div> 
+                  
+                  <div class="col-sm-1 makeitcenter">
+                    <span class="equalsto">=</span>
+                  </div> 
+
+
+                  <div class="col-sm-3 calcdiv">
+                    <h5 class="gcta">Target Total Compensation </h5>
+                    <div class="calcdivcenter">
+                      <input type="hidden" class="form-control calc" name="targetTcompensation" id="targetTcompensation" readonly placeholder="" value="" />
+                      <span id="targetTcompensationHtml"></span>
+                    </div>  
+                  </div>
+
+
+                  <div class="hiddenvalues">
+                    <!--<label class="col-sm-3 col-form-label">Target Cash Bonus<sup>*</sup></label>-->
+                    <input type="hidden" class="form-control calc" name="targetbonus" id="targetbonus" readonly placeholder="" value="" />
+
+                    <!--<label class="col-sm-3 col-form-label">Target Defferal Award if any<sup>*</sup></label>-->
+                      <input type="hidden" class="form-control calc" name="targetdefferal" id="targetdefferal" readonly placeholder="" value="" />
+              
+                    <!--<label class="col-sm-3 col-form-label">Target Total Cash<sup>*</sup></label>-->
+                      <input type="hidden" class="form-control calc" name="targetTcash" id="targetTcash" readonly placeholder="" value="" />
+                  </div>
+
+
+              </div><!--row-->
+
+
+              <hr/>
+
+
+              <div class="row mtops ibmultiplierlist">
+                 
+                <div class="col-12 col-sm-9">
+                  <div class="row">
+
+                    <div class="col-12 col-sm-3">
+                      <div class="compensation-intro mb-3">
+                        <img src="./public/assets/images/target-aib-icon.png" width="55" height="auto" class="cicon" alt="AIB Target"/>
+                        <h2>AIB Target </h2>
+                      </div>
+                      <div class="calcdiv cheight">
+                        <div class="calcdivcenter">
+                          <span>Target AIB Amount </span>
+                          <span id="aibamountHtml"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="oplus">x</span>
+                    </div> 
+
+                    <div class="col-12 col-sm-3">
+                      <div class="compensation-intro mb-3">
+                        <img src="./public/assets/images/individual-icon.png" width="55" height="auto" class="cicon" alt="individual mulitplier"/>
+                        <h2>Individual Multiplier </h2>
+                      </div>
+                      <input type="text" class="form-control multiplier" name="imultiplier" id="imultiplier" placeholder="Input your individual multiplier" value="" required/>
+                      <label class="percent">%</label>
+                      <div class="invalid-feedback" id="err-monthlybase">Individual Multiplier is empty!</div>
+                    </div>
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="oplus">x</span>
+                    </div> 
+
+                    <div class="col-12 col-sm-3">
+                      <div class="compensation-intro mb-3">
+                        <img src="./public/assets/images/business-multipler-icon.png" width="55" height="auto" class="cicon" alt="Business Multipler"/>
+                        <h2>Business Multiplier </h2>
+                      </div>
+                      <input type="text" class="form-control multiplier" name="bmultiplier" id="bmultiplier" placeholder="Input your company multiplier" value="" required/>
+                      <label class="percent">%</label>
+                      <div class="invalid-feedback" id="err-monthlybase">Business Multiplier is empty!</div>
+                    </div>  
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="equalsto">=</span>
+                    </div> 
+                  </div>
+                </div><!--col-sm-9-->
+
+                <div class="col-12 col-sm-3">
+                  <div class="calcdiv">
+
+                    <div class="calcdivcenter">
+                      <span>Actual AIB </span>
+                      <input type="hidden" class="form-control calc" name="acutalTvariablepay" id="acutalTvariablepay" readonly placeholder="" value="" />
+                      <span id="acutalTvariablepayHtml"></span>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!--row-->
+
+              
+              <hr/>
+
+
+              <div class="row mb-3">
+                <div class="col-12 mtop">
+                  <h3 class="overall">Actual Total Compensation</h3>
+                </div>
+              </div>
+
+
+              <div class="row actualcompensationlist">
+                <div class="col-sm-3 calcdiv textcenter">
+                  <h5 class="icon">
+                    <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="cash-icon"/>
+                  </h5>
+
+                  <div class="calcdivcenter">
+                    <span>Total Guaranteed Cash </span>
+                    <span id="tguaranteedcashHtml"></span>
+                  </div>
+
+                </div> 
+
+                <div class="col-sm-1 makeitcenter">
+                  <span class="oplus">+</span>
+                </div> 
+
+
+                <div class="col-sm-3 calcdiv textcenter">
+                  <h5 class="twoicon">
+                    <img src="./public/assets/images/target-aib-icon.png" width="55" height="auto" class="cicon" alt="AIB target"/>
+                    <img src="./public/assets/images/individual-icon.png" width="55" height="auto" class="cicon" alt="individual mulitplier"/>
+                    <img src="./public/assets/images/business-multipler-icon.png" width="55" height="auto" class="cicon" alt="business mulitplier"/>
+                  </h5>
+
+                  <div class="calcdivcenter">
+                    <span>Actual AIB  </span>
+                    <span id="acutalTvariablepayHtml"></span>
+                  </div>
+
+                </div> 
+                
+                <div class="col-sm-1 makeitcenter">
+                  <span class="equalsto">=</span>
+                </div> 
+
+
+                <div class="col-sm-3 calcdiv">
+                  <h5 class="gcta">Actual Total Compensation </h5>
+
+                  <div class="calcdivcenter">
+                    <input type="hidden" class="form-control calc" name="actualTcompensation" id="actualTcompensation" readonly placeholder="" value="" />
+                    <span id="actualTcompensationHtml"></span>
+                  </div>
+
+                </div>
+
+
+                <div class="hiddenvalues">
+                  <!--<label class="col-sm-3 col-form-label">Cash Bonus<sup>*</sup></label>-->
+                    <input type="hidden" class="form-control calc" name="cbonus" id="cbonus" readonly placeholder="" value="" />
+
+                  <!--<label class="col-sm-3 col-form-label">Defferal Award if any<sup>*</sup></label>-->
+                    <input type="hidden" class="form-control calc" name="defferalaward" id="defferalaward" readonly placeholder="" value="" />
+                 
+                  <!--<label class="col-sm-3 col-form-label">Actual Total Cash<sup>*</sup></label>-->
+                    <input type="hidden" class="form-control calc" name="actualTcash" id="actualTcash" readonly placeholder="" value="" />
+                </div>
+
+
+            </div><!--row-->
+
+
+            <br/>
+            <hr/>
+
+                  <div class="row mtop">
+                    <div class="col-12">
+                      <p>Now that we have calculated the Acutal AIB, let’s 
+                        find out how your Actual AIB will be delivered.</p>
+                        <input type="hidden" class="form-control calc" name="Tcondition" id="Tcondition" readonly placeholder="" value="" />
+                        <input type="hidden" class="form-control calc" name="Acondition" id="Acondition" readonly placeholder="" value="" />    
+                    </div>
+                  </div>
+
+                  <div class="mb-3 row">
+                    <div class="col-sm-12">
+                      <div class="mb-3">
+                        <span id="results" class="rcta">Next to Bonus Deferral Mechanism</span>
+                      </div>
+                    </div>
+                  </div>
+    
+    
+    
+                </form>
+              </div> <!--col-sm-8-->
+
+
+              <div class="col-12 col-sm-2 justify-content-center align-self-end">
+                <div class="mb-3 aligncenter">
+                  <img src="./public/assets/images/compensation2.png" width="220" height="auto" alt="Compensation Data" class="imgposition right"/>
+                </div>
+              </div>
+
+            </div><!--row-->
+          </div><!--aibcalculator--> 
+
+
+
+          <div class="col-12" id="aibcalculatorresults">
+            <div class="row">
+
+              <div class="col-12 col-sm-2 justify-content-center align-self-end">
+                <div class="mb-3 aligncenter">
+                  <span id="backtobc" class="bcta mb-3 backposition">Back</span>
+                  <img src="./public/assets/images/result1.png" width="220" height="auto" alt="Compensation Data" class="imgposition"/>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-8 positioned">
+
+                <div class="steps">
+                  <div class="mb-3">
+                    <div class="bg">
+                      <div class="step3"></div>
+                    </div> 
+                  </div>
+                </div> <!--steps-->  
+        
+                   <div class="row mtops-top">
+                      <div class="col-sm-12 flexinline">
+                        <img src="./public/assets/images/bonus-defferal-mechanism.png" width="55" height="auto" class="step-icon" alt="performance-measurement"/>
+                        <div class="step-intro">
+                          <h2>Bonus Deferral Mechanism </h2>
+                          <p>
+                            You AIB may be delivered in the combination of Cash Bonus and Deferred Bonus Award.
+                          </p>                        
+                        </div>
+                      </div>
+
+                      <hr/>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-12 col-sm-12">
+                      <h2>Your AIB based on your input</h2>
+                    </div>
+                  </div>  
+
+                <div class="row compensationchart">
+                    
+                    <div class="col-sm-2 calcdiv textcenter">
+                      <h5 class="icon">
+                        <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="cash-icon"/>
+                      </h5>
+  
+                      <div class="calcdivcenter">
+                        <span>Annual based salary </span>
+                        <span id="rannualbaseUSD"></span>
+                        <span id="rannualbase"></span>
+                      </div>
+                    </div> 
+  
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="omultiply">x</span>
+                    </div> 
+  
+  
+                    <div class="col-sm-2 calcdiv textcenter">
+                      <h5 class="icon">
+                        <img src="./public/assets/images/target-aib-icon.png" width="55" height="auto" class="cicon" alt="target-aib-icon"/>
+                      </h5>
+  
+                      <div class="calcdivcenter">
+                        <span>AIB Target</span>
+                        <span id="rtargetaib"></span>
+                      </div>
+                    </div> 
+                    
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="omultiply">x</span>
+                    </div> 
+
+
+                    <div class="col-sm-2 calcdiv textcenter">
+                      <h5 class="icon">
+                        <img src="./public/assets/images/individual-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                      </h5>
+  
+                      <div class="calcdivcenter">
+                        <span>Individual Multipler</span>
+                        <span id="rimultiplier"></span>
+                      </div>
+                    </div> 
+
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="omultiply">x</span>
+                    </div> 
+
+
+                    <div class="col-sm-2 calcdiv textcenter">
+                      <h5 class="icon">
+                        <img src="./public/assets/images/business-multipler-icon.png" width="55" height="auto" class="cicon" alt="performance-measurement"/>
+                      </h5>
+  
+                      <div class="calcdivcenter">
+                        <span>Business Multipler</span>
+                        <span id="rbmultiplier"></span>
+                      </div>
+                    </div> 
+
+                    <div class="col-sm-1 makeitcenter">
+                      <span class="equalsto">=</span>
+                    </div> 
+  
+  
+                    <div class="col-sm-2 calcdiv">
+                      <h5 class="gcta">AIB </h5>
+                      <div class="calcdivcenter">
+                        <span id="racutalTvariablepayUSD"></span>
+                        <span id="racutalTvariablepay"></span>
+                      </div>  
+                    </div>
+
+                </div>
+
+
+                <br/>
+                <hr/>
+               
+
+                  <div class="mb-3 row">
+                      <div class="col-12 col-sm-12">
+                        <a href="#" class="bcta checkfx" id="fxratespopup">Check FX rates</a>
+                        <h2>Determining Cash Bonus and Deferred Bonus Award</h2>
+                        <p class="mtop">To determine if your bonus is subject to deferral, your actual AIB will be converted to
+                              USD and follow the below deferral Matrix
+                        </p>
+                      </div>
+                  </div>
+
+
+
+                  <div id="aibintervalsection">
+                    <div id="deferral-matrix" class="mtops">  
+
+                      <div id="active" class="value-75"></div>
+
+                      <h5 class="gcta">Deferral matrix </h5>
+
+                          <div class="row" id="defferallist">
+                              <div class="col-12 col-sm-3 borderright">
+                                <p>AIB Intervals</p>
+                                <p>Deferral % </p>
+                              </div>
+
+                              <div class="col-12 col-sm-9">
+                                  <div class="row mb-3">
+                                    <div class="col-12 col-sm-3 zero"> 
+                                      <p id="zero">USD 0 – USD 65,000 </p>
+                                      <p>0% </p>
+                                    </div>
+                                    <div class="col-12 col-sm-3 forty"> 
+                                      <p id="forty">USD 65,001 – USD130,000</p>
+                                      <p>40%</p>
+                                    </div>
+                                    <div class="col-12 col-sm-3 fifty"> 
+                                      <p id="fifty">USD130,001 – USD250,000</p>
+                                      <p>50%</p>
+                                    </div>
+                                    <div class="col-12 col-sm-3"> 
+                                      <p id="sixty"> > USD250,000 </p>
+                                      <p>60%</p>
+                                    </div>
+                                  </div>
+                              </div>
+
+                        </div>
+
+                    </div><!--deferral-matrix-->
+
+
+
+                    <div id="youraib-matrix">
+                      <div class="pru-bg cborder">
+                        <!--<h5 class="gcta">Your AIB </h5>-->
+
+                            <div class="row">
+                                <div class="col-12 col-sm-3 borderright">
+                                  <div class="col-12 col-sm-12"> 
+                                    <p>
+                                      <span class="aib_usd">
+                                        Your total AIB spilt into the respective intervals
+                                      </span>
+                                    </p>
+                                 </div>
+                                </div>
+      
+                                <div class="col-12 col-sm-9">
+                                    <div class="row mb-3">
+                                      <div class="col-12 col-sm-3 zero"> <p id="aib_zero"> </p> <p>&nbsp;</p></div>
+                                      <div class="col-12 col-sm-3 forty"> <p id="aib_40"></p></div>
+                                      <div class="col-12 col-sm-3 fifty"> <p id="aib_50"></p></div>
+                                      <div class="col-12 col-sm-3"> <p id="aib_60"></p></div>
+                                    </div>
+                                </div>
+                          </div>
+
+                       
+                      </div>
+                    </div>
+
+
+                    <div id="youraib-deliverables">
+                      <div class="pru-bg">
+                        <h5 class="gcta">Your AIB Deliverables split by respective intervals </h5>
+                       
+
+                          <div class="row mtop">
+                            <div class="col-12 col-sm-3 borderright">
+                              <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="target-aib-icon">
+                              <p class="ydtitle">Cash Bonus  </p>
+                            </div>
+      
+                            <div class="col-12 col-sm-9 mtop">
+                                <div class="row">
+                                  <div class="col-12 col-sm-3 zero"> <p id="cbonus_zero"> </p></div>
+                                  <div class="col-12 col-sm-3 forty"> <p id="cbonus_40"></p></div>
+                                  <div class="col-12 col-sm-3 fifty"> <p id="cbonus_50"></p></div>
+                                  <div class="col-12 col-sm-3"> <p id="cbonus_60"></p></div>
+                                </div>
+                            </div>
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-12 col-sm-3 borderright">
+                              <img src="./public/assets/images/deffered-icon.png" width="55" height="auto" class="cicon" alt="target-aib-icon">
+                              <p class="ydtitle"> Deferred Bonus  </p>
+                            </div>
+      
+                            <div class="col-12 col-sm-9">
+                                <div class="row">
+                                  <div class="col-12 col-sm-3 zero"> <p id="defferalaward_zero"></p></div>
+                                  <div class="col-12 col-sm-3 forty"> <p id="defferalaward_40"></p></div>
+                                  <div class="col-12 col-sm-3 fifty"> <p id="defferalaward_50"></p></div>
+                                  <div class="col-12 col-sm-3"> <p id="defferalaward_60"></p></div>
+                                </div>
+                            </div>
+                          </div>
+
+
+                       
+                      </div>
+                    </div>
+
+                  </div><!--aibintervalsection-->
+
+
+            
+
+                    <div class="row" id="finalcbdbsection">
+                      <div class="col-sm-3">
+                        <div class="calcdiv textcenter">
+                          <div class="icon-button">
+                            <h5 class="icon2">
+                              <img src="./public/assets/images/cash-icon.png" width="55" height="auto" class="cicon" alt="target-aib-icon">
+                            </h5>
+                          </div>
+
+                          <div class="calcdivcenter">
+                            <span> Cash Bonus</span>
+                            <!--<span id="DBM_rcbonus">value</span>-->
+                            <span class="dbm_usd" id="DBM_USD_rcbonus"></span>  
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-sm-1 makeitcenter">
+                        <span class="oplus">+</span>
+                      </div> 
+
+                      <div class="col-sm-3">
+                        <div class="calcdiv textcenter">
+                          <div class="icon-button">
+                            <h5 class="icon2">
+                              <img src="./public/assets/images/deffered-icon.png" width="55" height="auto" class="cicon" alt="target-aib-icon">
+                            </h5>
+                          </div>  
+                          <div class="calcdivcenter">
+                            <span> Deferred Bonus</span>
+                            <!--<span id="DBM_rdefferalaward"></span>-->
+                            <span class="dbm_usd" id="DBM_USD_rdefferalaward"></span> 
+                            <span id="defferalaward_thershold"></span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-sm-1 makeitcenter">
+                        <span class="equalsto">=</span>
+                      </div> 
+
+
+                      <div class="col-sm-4">
+                        <div class="calcdiv textcenter">
+                          <div class="icon-button">
+                            <h5 class="icon2">
+                              <div class="greycta">Total AIB</div>
+                            </h5>
+                          </div>
+
+                          <div class="calcdivcenter">
+                            <!--<span id="DBM_racutalTvariablepay">value</span>-->
+                            <span class="dbm_usd" id="DBM_USD_racutalTvariablepay"></span>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div><!--finalcbdbsection-->
+
+
+
+                    <div id="deferralshares">
+
+                      <br/>
+                      <hr/>
+
+                        <div class="mb-3 mtops">
+                          
+                          <h2>Deferral Bonus Award Delivery</h2>
+
+                          <div class="row">
+                            <div class="col-12 col-sm-3">
+                              <input type="hidden" min="1" class="form-control" name="SharePriceCurrencyHKDValue" id="SharePriceCurrencyHKDValue" placeholder="" value="" readonly>
+                              <label class="col-form-label">Share price</label>
+                              <input type="number" min="1" class="form-control" name="shareprices" id="shareprices" placeholder="Enter amount" value="" required="">
+                              <label class="curr_currency">HKD </label>
+                              <p class="invalid-feedback" id="err-currency">Please enter share prices</p>
+                            </div>
+                          </div>
+                         
+                          <div class="row">
+                            <div class="col-12 col-sm-12">
+                                  <p>
+                                    Your deferred bonus award will be granted in Prudential shares, and you 
+                                    will receive it on a pro-rata basis over 3 years (with the exception if you are 
+                                    identified as a group in scope staff, you will be notified separately if so).​
+                                  </p>
+                            </div>
+                          </div>
+
+                            
+                        </div>
+
+
+                        <div class="row shareslist">
+                          <div class="calcdiv textcenter">
+                            <h5 class="gcta">Year 0 </h5>
+                            <div class="calcdivcenter">
+                              <p>You are granted Prudential shares equivalent to your deferred bonus </p>
+                              <p class="totalshares">Number of shares: <strong id="totalnoofshares"></strong> </p>
+                              <p id="defferalshare_zero"></p>
+                            </div>  
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <div class="col-sm-12 textcenter">
+                              <h5 class="greycta treeline">You receive the 1/3 of your deferred bonus award after 
+                                year 1, year 2, and year 3 </h5>
+                          </div>
+                       </div>
+
+
+                        <div class="row mtops">
+
+                          <div class="col-sm-4">
+                            <div class="calcdiv textcenter">
+                              <h5 class="gcta treeline">Year 1 </h5>
+                              <div class="calcdivcenter">
+                                <p class="eshares" id="shares_first"></p>
+                                <p id="defferalshare_first" style="display: none;"></p>
+                                <p>1/3 of <strong id="totalnoofshares"></strong> shares granted​</p>
+                              </div>  
+                            </div>
+                          </div>
+
+                          <div class="col-sm-4">
+                            <div class="calcdiv textcenter">
+                              <h5 class="gcta treeline">Year 2 </h5>
+                              <div class="calcdivcenter">
+                                <p class="eshares" id="shares_second"></p>
+                                <p id="defferalshare_second" style="display: none;"></p>
+                                <p>1/3 of <strong id="totalnoofshares"></strong> shares granted​</p>
+                              </div>  
+                            </div>
+                          </div>
+
+
+                          <div class="col-sm-4">
+                            <div class="calcdiv textcenter">
+                              <h5 class="gcta treeline">Year 3 </h5>
+                              <div class="calcdivcenter">
+                                <p class="eshares" id="shares_third"></p>
+                                <p id="defferalshare_third"  style="display: none;"></p>
+                                <p>1/3 of <strong id="totalnoofshares"></strong> shares granted​</p>
+                              </div>  
+                            </div>
+                          </div>
+
+                      </div>
+                       
+
+                    </div> <!--deferralshares ends-->
+
+                     
+                    <hr/>
+
+                    <div class="mb-3 row">
+                      <div class="col-sm-12">
+                        <a href="#" id="OverBtnBacktobc" class="rcta">Start over calculation</a>
+                      </div>
+                    </div>
+                   
+
+              </div><!-- col-sm-8-->
+
+
+              <div class="col-12 col-sm-2 justify-content-center align-self-end">
+                <div class="mb-3 aligncenter">
+                  <img src="./public/assets/images/result2.png" width="220" height="auto" alt="Compensation Data" class="imgposition right"/>
+                </div>
+              </div>
+
+            </div><!--row-->
+          </div> <!--aibcalculatorresults-->
+
+
+
+        </div> 
+      </div>
+    </div>
+
+
+
+  <!--All Popups-->
+
+  <!-- The Modal Rating -->
+  <div id="ModalRating" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta">Close</span>
+      
+      <div class="container">
+        <div class="row" id="information-rating">
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-3 borderright mtop">
+            <h3>Performance Rating</h3>
+            <div class="pdesc">
+              Outstanding <br/>
+            
+            </div>
+            <div class="pdesc">
+              Highly Effective <br/>
+            
+            </div>
+            <div class="pdesc">
+              Effective <br/>
+             
+            </div>
+            <div class="pdesc">
+              Needs Improvement <br/>
+             
+            </div>
+           
+          </div>
+          <div class="col-12 col-sm-9 mtop">
+            <h3>Descriptions</h3>
+            <div class="desc">
+              <p>Typically applied where individual has risen to the occasion, <span>significantly overachieving </span>in a demanding situation and stands out as a role model, very few individuals are likely to operate at “Outstanding” year on year.</p>
+            </div>
+            <div class="desc">
+              <p>An individual whose approach and quality of work <span>always meets</span> the agreed objectives, expectations and requirements of the role, and <span>often goes beyond</span>. </p>
+            </div>
+            <div class="desc">
+              <p>Performance is <span>in line with most</span> or all the agreed objectives, expectations and requirements of the role. Overall performance is of good quality and at the standard typically expected of the role for most or all areas.</p>
+            </div>
+            <div class="desc">
+              <p>An individual who <span>meets few or only some of the agreed objectives </span>, expectations and requirements of the role. Performance in Key and / or a number of​ aspects is below the standard typically expected of the role and a Performance Improvement Plan is required for the individual.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    </div>
+  </div>
+
+
+
+  <!-- The Modal What Objectives -->
+  <div id="ModalWhatObjectives" class="modal">
+    
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta">Close</span>
+      
+      <div class="container">
+        <div class="row" id="what-objective-popup-info">
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-12 mtop">
+            <h3>WHAT <span>objectives</span></h3>
+            <p>Measures “what” an employee achieves during the performance year</p>
+          </div>
+
+          <hr/>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-1">
+                <img src="./public/assets/images/wh1.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+              </div>
+              <div class="col-12 col-sm-9">
+                    <p>During Objective Setting, You set up individual objectives <strong>(“<span class="red">S</span>pecific,<br/> 
+                      <span class="red">M</span>easurable, <span class="red">A</span>chievable, <span class="red">R</span>elevant / Result-oriented, <span class="red">T</span>ime-Bound”) </strong> that are <br/> 
+                      aligned with corporate / functional / team objectives, and agree with your <br/> 
+                      manager on the weighting of each objective.</p>
+              </div>
+
+              <div class="col-12 col-sm-2">
+                 <a href="#" class="bcta" id="whatobjectivesmart">Find out more</a>         
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-1">
+                <img src="./public/assets/images/wh2.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+              </div>
+              <div class="col-12 col-sm-9">
+                  <p> During Year-end Performance Review, COACH principles should apply. <br/></p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-1">
+                <img src="./public/assets/images/wh3.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+              </div>
+              <div class="col-12 col-sm-9">
+                  <p>During Year-end Performance Review,​ each objective will be assessed with a <br/>
+                     performance rating which corresponds to a score.</p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-1">
+                <img src="./public/assets/images/wh1.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+              </div>
+              <div class="col-12 col-sm-9">
+                  <p><strong>Individual Development Plan (IDP):</strong> Remember that you are <br/>
+                    responsible for your own career development and growth, discuss with <br/>
+                    your manager and evaluate regularly. </p>
+              </div>
+              <div class="col-12 col-sm-2">
+                 <a href="#" class="bcta" id="whatobjectivedevplan">Find out more</a>         
+              </div>
+            </div><!--one-->
+          </div>
+           
+           
+          
+          
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalWhatObjectives-->
+
+
+
+  <!-- The Modal What Objectives Smart-->
+  <div id="ModalWhatObjectivesSmart" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta back">Back</span>
+
+      <div class="container">
+        <div class="row" id="what-objective-smart-info">
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-2 mtop">
+                <div class="calcdiv">
+                    <img src="./public/assets/images/s.png" width="55" height="auto" class="cicon" alt="cash-icon">
+                    <span>Specific </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10">
+                  <p><strong> Who, What, Where, When, Why, Which </strong><br/>
+                    Clearly describe your Objective as much as possible with no ambiguous language. <br/>
+                    Who is involved? <br/>
+                    What do I want to accomplish? <br/>
+                    Where and When will it be done?​<br/>
+                    Why am I doing this (reason, purpose)? <br/>
+                    Which constraints / requirements do I have?</p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-2 mtop">
+                <div class="calcdiv">
+                    <img src="./public/assets/images/m.png" width="55" height="auto" class="cicon" alt="cash-icon">
+                    <span>Measurable </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10">
+                  <p><strong>From and To </strong> <br/>
+                    Make sure you can track the progress and measure the outcome. If your Objective is not quantifiable​, it should be least be verifiable. <br/>
+                    How much? <br/>
+                    How many? <br/>
+                    How will I know when my Objective is accomplished?</p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-2 mtop">
+                <div class="calcdiv">
+                    <img src="./public/assets/images/a.png" width="55" height="auto" class="cicon" alt="cash-icon">
+                    <span>Achievable</span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10">
+                  <p> <strong>How </strong> <br/>
+                    Make sure your Objective is not out of reach or below standard performance.  <br/>
+                    Is the Objective reasonable enough to be accomplished?  <br/>
+                    How so?
+                  </p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-2 mtop">
+                <div class="calcdiv">
+                    <img src="./public/assets/images/r.png" width="55" height="auto" class="cicon" alt="cash-icon">
+                    <span>Relevant </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10">
+                  <p>
+                  <strong>Worthwhile </strong><br/>
+                    Make sure your Objective is worthwhile and meets your needs.  <br/>
+                    Does the Objective contribute and align with company / department plans?   <br/>
+                    Does the Objective relate to your job and fits with your immediate and long term career plans?
+                  </p>
+              </div>
+            </div><!--one-->
+            <hr/>
+          </div>
+
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <div class="col-12 col-sm-2 mtop">
+                <div class="calcdiv">
+                    <img src="./public/assets/images/t.png" width="55" height="auto" class="cicon" alt="cash-icon">
+                    <span>Time-Bound </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-10">
+                  <p>
+                  <strong>When  </strong><br/>
+                    Your Objective should be achieved within a certain and clear timeframe. It will establish a sense of urgency and prompt you to have better time management.  <br/>
+                    “I will complete this step by day/week/month.”
+                  </p>
+              </div>
+            </div><!--one-->
+          </div>
+           
+           
+          
+          
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalWhatObjectivesSmart-->
+
+
+
+   <!-- The Modal What Objectives Individual Plan-->
+   <div id="ModalWhatObjectivesIndividualPlan" class="modal">
+      
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta back">Back</span>
+     
+      <div class="container">
+        <div class="row" id="whatobjective-idevplan">
+
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-6 borderright mtop">
+            <h3>Steps</h3>
+
+              <div class="row">
+                <div class="col-12 col-sm-2">
+                  <img src="./public/assets/images/id1.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10 pdesc">
+                    <p>Identify 1 to 2 development goal(s) which will make the most significant impact in the current Role, and​ accelerate significantly your personal and professional career.</p>
+                </div>
+              </div><!--one-->
+
+              <div class="row">
+                <div class="col-12 col-sm-2">
+                  <img src="./public/assets/images/id2.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10 pdesc">
+                  <p>Define what success looks like for these Development Goals: provide very specific and observable behaviors or measures so that progress can be easily captured.</p>
+                </div>
+              </div><!--one-->
+
+              <div class="row">
+                <div class="col-12 col-sm-2">
+                  <img src="./public/assets/images/id3.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10 pdesc">
+                  <p>Develop action plans based on the 70/20/10 Model​ <br/>
+                    Action plan – on the job experience (70%)​</p>
+                </div>
+              </div><!--one-->
+
+              <div class="row">
+                <div class="col-12 col-sm-2">
+                  <img src="./public/assets/images/id4.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10 pdesc">
+                  <p>Action plan – Support from Others (Mentoring & Coaching) (20%)​
+                  </p>
+                </div>
+              </div><!--one-->
+
+              <div class="row">
+                <div class="col-12 col-sm-2">
+                  <img src="./public/assets/images/id5.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10 pdesc">
+                  <p>Action plan – Learning & Training (10%)​
+                  </p>
+                </div>
+              </div><!--one-->
+
+          </div>
+
+
+          <div class="col-12 col-sm-6 mtop">
+            <h3>Example</h3>
+            <div class="desc">
+              <p>Develop my ability to engage, motivate and influence people during presentations and meetings.</p>
+            </div>
+            <div class="desc">
+              <p>I am able to present to a group of people and, in a succinct and  clear manner, provide an inspiring and engaging reason for them to act. They react positively and with enthusiasm to my ideas.</p>
+            </div>
+            <div class="desc">
+              <ul class="lists">
+                <li>I will provide quarterly progress meetings to the team and highlight the successes for the month and the focus for the next month.
+                </li>
+                <li>I will  ask trusted members of my team to give me feedback.</li>
+                <li>I will work with the GM and prepare his monthly town hall  meetings so that I can plan and review approaches for influencing  others.
+                </li>
+              </ul>
+            </div>
+
+            <div class="desc">
+              <p>I will ask Frederick to act as my coach/mentor as he is proficient in this area. We will meet monthly to discuss how to utilise different techniques and approaches to engage people. 
+                I will ask him to attend some of my meetings and give me feedback.</p>
+            </div>
+            <div class="desc">
+              <p>Discuss with HR opportunities for a course on executive presence and influencing skills. Also watch videos on TED for tips on effective presentation skills.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalWhatObjectivesIndividualPlan-->
+
+
+
+
+
+
+  <!-- The Modal Final Resutls -->
+  <div id="ModalFinalResults" class="modal">
+    
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta">Close</span>
+     
+      <div class="container">
+        <div class="row" id="finalresults-modalinfo">
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12">
+            <h3>Overall Guided Rating Calculation​</h3>
+            <p>
+              Your calculated overall score will be rounded to nearest 5% (your guided AIB Individual Multiplier) and will fall within the performance ranges which corresponds to a performance rating (your guided performance rating).
+              <br/>
+              The guided performance rating and AIB Individual Multiplier will form the basis for further calibration. 
+              <br/>
+              Example 1: 109% will be rounded to nearest 5% , i.e. 110% , which falls under range of 110% - 125% of Highly Effective rating.
+              <br/>
+              Example 2: 77% will be rounded to nearest 5% , i.e. 75% , which falls under range of below 80% of Needs Improvement rating.
+            </p>
+          </div>
+
+  
+          <div class="col-12 col-sm-4 borderright mtops intro">
+                <h3>Overall Score</h3>
+                <div class="pdesc">
+                  <p>130% – 150%</p>
+                </div>
+                <div class="pdesc">
+                  <p>110% – 125%</p>
+                </div>
+                <div class="pdesc">
+                  <p>80% – 105%</p>
+                </div>
+                <div class="pdesc">
+                  <p> Below 80%</p>
+                </div>
+          </div>
+
+          <div class="col-12 col-sm-8 spaceleft mtops intro">
+              <h3>Performance Rating</h3>
+              <div class="desc">
+                <p>Outstanding</p>
+              </div>
+              <div class="desc">
+                <p>Highly Effective </p>
+              </div>
+              <div class="desc">
+                <p>Effective</p>
+              </div>
+              <div class="desc">
+                <p>Needs Improvement</p>
+              </div>
+          </div>
+
+
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalFinalResults-->
+
+
+
+  <!-- The Modal Fx Rates -->
+  <div id="ModalFXrates" class="modal">
+   
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta">Close</span>
+     
+      <div class="container">
+        <div class="row" id="fxrates-modalinfo">
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row">
+              <h3 class="col-12 col-sm-9">Exchange Rates</h3>
+              <p class="col-12 col-sm-3">As of: <br/> <span id="fxupdateddate"></span> </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 mtop">
+            <div class="row" id="fxdatacontent">
+              <!--fx data dynamic content-->
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalFXrates-->
+
+
+
+
+  <!-- The Modal Values-->
+  <div id="ModalValues" class="modal">
+      
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close bcta">Close</span>
+     
+      <div class="container">
+        <div class="row" id="values-popup">
+
+
+          <div class="msteps">
+            <div class="mb-3">
+              <div class="bg">
+                <div class="step3"></div>
+              </div> 
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-12 mtop">
+            <h3>Our Values</h3>
+
+            <div class="row mtop">
+              <div class="col-12 col-sm-12">
+                <img src="./public/assets/images/values.png" width="100%" height="auto" alt="performance-measurement">
+              </div>
+            </div>
+
+              <!--<div class="row mtop">
+                <div class="col-12 col-sm-1">
+                  <img src="./public/assets/images/values1.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10">
+                    <h4 class="red">Ambitious</h4>
+                    <p>Our business is competitive. We push ourselves and each other to greatness, but not at all costs.Being a team player and doing the right thing come first.</p>
+                </div>
+              </div>
+
+              <div class="row mtop">
+                <div class="col-12 col-sm-1">
+                  <img src="./public/assets/images/values2.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10">
+                  <h4 class="blue">Curious</h4>
+                  <p>The world is changing faster than ever, and no one has all the answers. We are humble and always listen and seek to learn and understand.</p>
+                </div>
+              </div>
+
+              <div class="row mtop">
+                <div class="col-12 col-sm-1">
+                  <img src="./public/assets/images/values3.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10">
+                  <h4 class="orange">EMPATHETIC</h4>
+                  <p>There's an age-old wisdom in walking a mile in another’s shoes. We do that every day, whether it’s with our customers or  colleagues.</p>
+                </div>
+              </div>
+
+              <div class="row mtop">
+                <div class="col-12 col-sm-1">
+                  <img src="./public/assets/images/values4.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10">
+                  <h4 class="green">COURAGEOUS</h4>
+                  <p>Prudential’s success and culture belongs to all of us - it's our shared legacy. We do the right thing and bring our full selves to work to build it together.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row mtop">
+                <div class="col-12 col-sm-1">
+                  <img src="./public/assets/images/values5.png" width="55" height="auto" class="popup-icon" alt="performance-measurement">
+                </div>
+                <div class="col-12 col-sm-10">
+                  <h4 class="lightorange">NIMBLE</h4>
+                  <p>Being agile and adaptive is trending. We approach our work iteratively, with carefully-designed experiments that help us fail fast and fail forward.
+                  </p>
+                </div>
+              </div>-->
+
+          </div>
+
+
+         
+
+
+        </div>
+      </div>
+    
+
+    </div>
+  </div><!--ModalValues-->
+
+
+
+  
+
+    
+    <!--<footer>
+      <span>© 2022 Performance Management & Reward Framework. </span>
+    </footer>-->
+
+    <!-- custom js-->
+    <script type="text/javascript" src="./public/bundle.js" async></script>
+
+  </body>
+</html>
